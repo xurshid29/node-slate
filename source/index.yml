@@ -2,9 +2,6 @@ title: API Reference
 
 language_tabs:
    - bash
-   - ruby
-   - python
-   - javascript
 
 toc_footers:
    - <a href=https://github.com/center-key/node-slate>node-slate on GitHub</a>
@@ -12,6 +9,11 @@ toc_footers:
 
 includes:
    - main
+   - user
+   - shelters
+   - news
+   - important_to_know
+   - testing
    - _errors
 
 search: true
