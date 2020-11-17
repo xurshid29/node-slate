@@ -409,7 +409,7 @@ curl --request GET \
 ## Check scores by user
 
 <aside class=warning>
-This request requires authentication (X-AUTH-TOKEN header with firebase session key)
+This request requires authentication (X-AUTH-TOKEN header with Device Id)
 </aside>
 
 ### HTTP Request
@@ -448,7 +448,7 @@ curl --request GET \
 ## Complete testing by user
 
 <aside class=warning>
-This request requires authentication (X-AUTH-TOKEN header with firebase session key)
+This request requires authentication (X-AUTH-TOKEN header with Device ID)
 </aside>
 
 ### HTTP Request
