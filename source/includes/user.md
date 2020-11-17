@@ -12,10 +12,10 @@ Parameter | Default | Description
 --------- | ------- | -----------
 name | none | Name of the user
 region | none | Region of the user
-regionLat | none | Latitude
-regionLng | none | Longitude
+regionLat | none | (Optional) Latitude
+regionLng | none | (Optional) Longitude
 phoneNumber | none | Verified phone number of the user
-firebaseToken | none | Token from firebase response
+deviceId | none | Device ID
 
 ```bash
 curl --request POST \
@@ -27,7 +27,7 @@ curl --request POST \
   "regionLat": 46.123123,
   "regionLng": 35.345345,
   "phoneNumber": "998998597873",
-  "firebaseToken": "qweqweqweqe123123dasd1"
+  "deviceId": "12312313123123"
 }'
 ```
 
@@ -118,8 +118,8 @@ Parameter | Default | Description
 --------- | ------- | -----------
 name | none | Name of the user
 region | none | Region of the user
-regionLat | none | Latitude
-regionLng | none | Longitude
+regionLat | none | (Optional) Latitude
+regionLng | none | (Optional) Longitude
 
 ```bash
 curl --request PUT \
@@ -169,8 +169,8 @@ Parameter | Default | Description
 --------- | ------- | -----------
 name | none | Name of the user
 region | none | Region of the user
-regionLat | none | Latitude
-regionLng | none | Longitude
+regionLat | none | (Optional) Latitude
+regionLng | none | (Optional) Longitude
 
 ```bash
 curl --request PATCH \
@@ -225,20 +225,20 @@ curl --request PATCH \
   --url http://api.najot.test/v1/users/{ID} \
   --header 'content-type: application/json' \
   --data '{
-  "contacts": [
-    {
-      "whoIs": "Brother 1",
-      "phoneNumber": "998991234567"
-    },
-    {
-      "whoIs": "Brother 2",
-      "phoneNumber": "998991234568"
-    },
-    {
-      "whoIs": "Brother 3",
-      "phoneNumber": "998991234569"
-    }
-  ]
+      "contacts": [
+        {
+          "whoIs": "Brother 1",
+          "phoneNumber": "998991234567"
+        },
+        {
+          "whoIs": "Brother 2",
+          "phoneNumber": "998991234568"
+        },
+        {
+          "whoIs": "Brother 3",
+          "phoneNumber": "998991234569"
+        }
+      ]
 }'
 ```
 
