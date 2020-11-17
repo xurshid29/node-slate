@@ -637,7 +637,7 @@
             <h3 id="http-request">HTTP Request</h3>
             <p><code>GET https://api.najotapp.uz/v1/testings</code></p>
             <pre class="highlight bash"><code>curl --request GET \
-  --url http://api.najot.test/v1/testings</code></pre>
+  --url http://api.najotapp.uz/v1/testings</code></pre>
             <blockquote>
                <p>The above command returns JSON structured like this:</p>
             </blockquote>
@@ -645,10 +645,63 @@
   <span class="hljs-attr">&quot;page&quot;</span>: <span class="hljs-number">1</span>,
   <span class="hljs-attr">&quot;items&quot;</span>: [
     {
-      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">50</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">60</span>,
       <span class="hljs-attr">&quot;questions&quot;</span>: [
         {
-          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">99</span>,
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">104</span>,
+          <span class="hljs-attr">&quot;choices&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;translations&quot;</span>: {
+                <span class="hljs-attr">&quot;ru&quot;</span>: {
+                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 1&quot;</span>
+                },
+                <span class="hljs-attr">&quot;uz&quot;</span>: {
+                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 1&quot;</span>
+                },
+                <span class="hljs-attr">&quot;tg&quot;</span>: {
+                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 1&quot;</span>
+                }
+              },
+              <span class="hljs-attr">&quot;weight&quot;</span>: <span class="hljs-number">10</span>
+            },
+            {
+              <span class="hljs-attr">&quot;translations&quot;</span>: {
+                <span class="hljs-attr">&quot;ru&quot;</span>: {
+                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 2&quot;</span>
+                },
+                <span class="hljs-attr">&quot;uz&quot;</span>: {
+                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 2&quot;</span>
+                },
+                <span class="hljs-attr">&quot;tg&quot;</span>: {
+                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 2&quot;</span>
+                }
+              },
+              <span class="hljs-attr">&quot;weight&quot;</span>: <span class="hljs-number">30</span>
+            }
+          ],
+          <span class="hljs-attr">&quot;translations&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">310</span>,
+              <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Question 1&quot;</span>,
+              <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;ru&quot;</span>
+            },
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">312</span>,
+              <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Question 1&quot;</span>,
+              <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;tg&quot;</span>
+            },
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">311</span>,
+              <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Question 1&quot;</span>,
+              <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;uz&quot;</span>
+            }
+          ],
+          <span class="hljs-attr">&quot;new_translations&quot;</span>: <span class="hljs-literal">null</span>,
+          <span class="hljs-attr">&quot;current_locale&quot;</span>: <span class="hljs-string">&quot;ru&quot;</span>,
+          <span class="hljs-attr">&quot;default_locale&quot;</span>: <span class="hljs-string">&quot;ru&quot;</span>
+        },
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">106</span>,
           <span class="hljs-attr">&quot;choices&quot;</span>: [
             {
               <span class="hljs-attr">&quot;translations&quot;</span>: {
@@ -677,50 +730,22 @@
                 }
               },
               <span class="hljs-attr">&quot;weight&quot;</span>: <span class="hljs-number">30</span>
-            },
-            {
-              <span class="hljs-attr">&quot;translations&quot;</span>: {
-                <span class="hljs-attr">&quot;ru&quot;</span>: {
-                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 3&quot;</span>
-                },
-                <span class="hljs-attr">&quot;uz&quot;</span>: {
-                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 3&quot;</span>
-                },
-                <span class="hljs-attr">&quot;tg&quot;</span>: {
-                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 3&quot;</span>
-                }
-              },
-              <span class="hljs-attr">&quot;weight&quot;</span>: <span class="hljs-number">10</span>
-            },
-            {
-              <span class="hljs-attr">&quot;translations&quot;</span>: {
-                <span class="hljs-attr">&quot;ru&quot;</span>: {
-                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 4&quot;</span>
-                },
-                <span class="hljs-attr">&quot;uz&quot;</span>: {
-                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 4&quot;</span>
-                },
-                <span class="hljs-attr">&quot;tg&quot;</span>: {
-                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 4&quot;</span>
-                }
-              },
-              <span class="hljs-attr">&quot;weight&quot;</span>: <span class="hljs-number">40</span>
             }
           ],
           <span class="hljs-attr">&quot;translations&quot;</span>: [
             {
-              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">295</span>,
-              <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Question 1&quot;</span>,
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">316</span>,
+              <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Question 2&quot;</span>,
               <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;ru&quot;</span>
             },
             {
-              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">297</span>,
-              <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Question 1&quot;</span>,
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">318</span>,
+              <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Question 2&quot;</span>,
               <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;tg&quot;</span>
             },
             {
-              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">296</span>,
-              <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Question 1&quot;</span>,
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">317</span>,
+              <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Question 2&quot;</span>,
               <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;uz&quot;</span>
             }
           ],
@@ -733,169 +758,69 @@
         {
           <span class="hljs-attr">&quot;interval&quot;</span>: {
             <span class="hljs-attr">&quot;min&quot;</span>: <span class="hljs-number">0</span>,
-            <span class="hljs-attr">&quot;max&quot;</span>: <span class="hljs-number">30</span>
-          },
-          <span class="hljs-attr">&quot;translations&quot;</span>: {
-            <span class="hljs-attr">&quot;ru&quot;</span>: {
-              <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 4&quot;</span>,
-              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Description 4&quot;</span>
-            }
-          }
-        },
-        {
-          <span class="hljs-attr">&quot;interval&quot;</span>: {
-            <span class="hljs-attr">&quot;min&quot;</span>: <span class="hljs-number">30</span>,
-            <span class="hljs-attr">&quot;max&quot;</span>: <span class="hljs-number">70</span>
-          },
-          <span class="hljs-attr">&quot;translations&quot;</span>: {
-            <span class="hljs-attr">&quot;uz&quot;</span>: {
-              <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 4&quot;</span>,
-              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Description 4&quot;</span>
-            }
-          }
-        },
-        {
-          <span class="hljs-attr">&quot;interval&quot;</span>: {
-            <span class="hljs-attr">&quot;min&quot;</span>: <span class="hljs-number">70</span>,
-            <span class="hljs-attr">&quot;max&quot;</span>: <span class="hljs-number">90</span>
-          },
-          <span class="hljs-attr">&quot;translations&quot;</span>: {
-            <span class="hljs-attr">&quot;tg&quot;</span>: {
-              <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 4&quot;</span>,
-              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Description 4&quot;</span>
-            }
-          }
-        },
-        {
-          <span class="hljs-attr">&quot;interval&quot;</span>: {
-            <span class="hljs-attr">&quot;min&quot;</span>: <span class="hljs-number">90</span>,
-            <span class="hljs-attr">&quot;max&quot;</span>: <span class="hljs-number">100</span>
-          },
-          <span class="hljs-attr">&quot;translations&quot;</span>: []
-        }
-      ],
-      <span class="hljs-attr">&quot;image&quot;</span>: {
-        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">6</span>,
-        <span class="hljs-attr">&quot;original_name&quot;</span>: <span class="hljs-string">&quot;Colour1&quot;</span>,
-        <span class="hljs-attr">&quot;mime_type&quot;</span>: <span class="hljs-string">&quot;image/jpeg&quot;</span>,
-        <span class="hljs-attr">&quot;urls&quot;</span>: {
-          <span class="hljs-attr">&quot;original&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/original/image/fe/be/48/febe48061ff67d384500f0283e82570c6e4cf0d9c3bf43497fe3c34ca4d5784b.jpg&quot;</span>,
-          <span class="hljs-attr">&quot;100x_&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/100x_/image/fe/be/48/febe48061ff67d384500f0283e82570c6e4cf0d9c3bf43497fe3c34ca4d5784b.jpg&quot;</span>,
-          <span class="hljs-attr">&quot;300x_&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/300x_/image/fe/be/48/febe48061ff67d384500f0283e82570c6e4cf0d9c3bf43497fe3c34ca4d5784b.jpg&quot;</span>,
-          <span class="hljs-attr">&quot;500x_&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/500x_/image/fe/be/48/febe48061ff67d384500f0283e82570c6e4cf0d9c3bf43497fe3c34ca4d5784b.jpg&quot;</span>
-        }
-      },
-      <span class="hljs-attr">&quot;translations&quot;</span>: [
-        {
-          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">148</span>,
-          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Test testing 2&quot;</span>,
-          <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;ru&quot;</span>
-        },
-        {
-          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">150</span>,
-          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Test testing 2&quot;</span>,
-          <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;tg&quot;</span>
-        },
-        {
-          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">149</span>,
-          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Test testing 2&quot;</span>,
-          <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;uz&quot;</span>
-        }
-      ],
-      <span class="hljs-attr">&quot;new_translations&quot;</span>: <span class="hljs-literal">null</span>,
-      <span class="hljs-attr">&quot;current_locale&quot;</span>: <span class="hljs-string">&quot;ru&quot;</span>,
-      <span class="hljs-attr">&quot;default_locale&quot;</span>: <span class="hljs-string">&quot;ru&quot;</span>
-    },
-    {
-      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">42</span>,
-      <span class="hljs-attr">&quot;questions&quot;</span>: [],
-      <span class="hljs-attr">&quot;results&quot;</span>: [
-        {
-          <span class="hljs-attr">&quot;interval&quot;</span>: {
-            <span class="hljs-attr">&quot;min&quot;</span>: <span class="hljs-number">0</span>,
-            <span class="hljs-attr">&quot;max&quot;</span>: <span class="hljs-number">20</span>
+            <span class="hljs-attr">&quot;max&quot;</span>: <span class="hljs-number">40</span>
           },
           <span class="hljs-attr">&quot;translations&quot;</span>: {
             <span class="hljs-attr">&quot;ru&quot;</span>: {
               <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 1&quot;</span>,
-              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Description 1&quot;</span>
+              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Desc 1&quot;</span>
             },
             <span class="hljs-attr">&quot;uz&quot;</span>: {
-              <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 1 1&quot;</span>,
-              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Description 1 1&quot;</span>
+              <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 1&quot;</span>,
+              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Desc 1&quot;</span>
             },
             <span class="hljs-attr">&quot;tg&quot;</span>: {
-              <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 1 1&quot;</span>,
-              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Description 1 1&quot;</span>
+              <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 1&quot;</span>,
+              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Desc 1&quot;</span>
             }
           }
         },
         {
           <span class="hljs-attr">&quot;interval&quot;</span>: {
-            <span class="hljs-attr">&quot;min&quot;</span>: <span class="hljs-number">20</span>,
-            <span class="hljs-attr">&quot;max&quot;</span>: <span class="hljs-number">50</span>
+            <span class="hljs-attr">&quot;min&quot;</span>: <span class="hljs-number">40</span>,
+            <span class="hljs-attr">&quot;max&quot;</span>: <span class="hljs-number">70</span>
           },
           <span class="hljs-attr">&quot;translations&quot;</span>: {
             <span class="hljs-attr">&quot;ru&quot;</span>: {
               <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 2&quot;</span>,
-              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Description 2&quot;</span>
+              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Desc 2&quot;</span>
             },
             <span class="hljs-attr">&quot;uz&quot;</span>: {
               <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 2&quot;</span>,
-              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Description 2&quot;</span>
+              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Desc 2&quot;</span>
             },
             <span class="hljs-attr">&quot;tg&quot;</span>: {
-              <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 2 2&quot;</span>,
-              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Description 2 2&quot;</span>
-            }
-          }
-        },
-        {
-          <span class="hljs-attr">&quot;interval&quot;</span>: {
-            <span class="hljs-attr">&quot;min&quot;</span>: <span class="hljs-number">50</span>,
-            <span class="hljs-attr">&quot;max&quot;</span>: <span class="hljs-number">100</span>
-          },
-          <span class="hljs-attr">&quot;translations&quot;</span>: {
-            <span class="hljs-attr">&quot;ru&quot;</span>: {
-              <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 3&quot;</span>,
-              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Description 3&quot;</span>
-            },
-            <span class="hljs-attr">&quot;uz&quot;</span>: {
-              <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 3&quot;</span>,
-              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Description 3&quot;</span>
-            },
-            <span class="hljs-attr">&quot;tg&quot;</span>: {
-              <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 3&quot;</span>,
-              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Description 3 ED&quot;</span>
+              <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 2&quot;</span>,
+              <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Desc 2&quot;</span>
             }
           }
         }
       ],
       <span class="hljs-attr">&quot;image&quot;</span>: {
-        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">5</span>,
-        <span class="hljs-attr">&quot;original_name&quot;</span>: <span class="hljs-string">&quot;Colour10&quot;</span>,
-        <span class="hljs-attr">&quot;mime_type&quot;</span>: <span class="hljs-string">&quot;image/png&quot;</span>,
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">10</span>,
+        <span class="hljs-attr">&quot;original_name&quot;</span>: <span class="hljs-string">&quot;Colour6&quot;</span>,
+        <span class="hljs-attr">&quot;mime_type&quot;</span>: <span class="hljs-string">&quot;image/jpeg&quot;</span>,
         <span class="hljs-attr">&quot;urls&quot;</span>: {
-          <span class="hljs-attr">&quot;original&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/original/image/e7/4b/98/e74b98d99ad3a5ca66b4b44fa1b9d1d83e183637fe16a785a8344f60335bca4e.png&quot;</span>,
-          <span class="hljs-attr">&quot;100x_&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/100x_/image/e7/4b/98/e74b98d99ad3a5ca66b4b44fa1b9d1d83e183637fe16a785a8344f60335bca4e.png&quot;</span>,
-          <span class="hljs-attr">&quot;300x_&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/300x_/image/e7/4b/98/e74b98d99ad3a5ca66b4b44fa1b9d1d83e183637fe16a785a8344f60335bca4e.png&quot;</span>,
-          <span class="hljs-attr">&quot;500x_&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/500x_/image/e7/4b/98/e74b98d99ad3a5ca66b4b44fa1b9d1d83e183637fe16a785a8344f60335bca4e.png&quot;</span>
+          <span class="hljs-attr">&quot;original&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/original/image/c2/30/c7/c230c71b25edf25741dc36eed90cb8509a27364292dda8bf70632a68f71556fa.jpg&quot;</span>,
+          <span class="hljs-attr">&quot;100x_&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/100x_/image/c2/30/c7/c230c71b25edf25741dc36eed90cb8509a27364292dda8bf70632a68f71556fa.jpg&quot;</span>,
+          <span class="hljs-attr">&quot;300x_&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/300x_/image/c2/30/c7/c230c71b25edf25741dc36eed90cb8509a27364292dda8bf70632a68f71556fa.jpg&quot;</span>,
+          <span class="hljs-attr">&quot;500x_&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/500x_/image/c2/30/c7/c230c71b25edf25741dc36eed90cb8509a27364292dda8bf70632a68f71556fa.jpg&quot;</span>
         }
       },
       <span class="hljs-attr">&quot;translations&quot;</span>: [
         {
-          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">124</span>,
-          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Test testing 1&quot;</span>,
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">178</span>,
+          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Testing 1&quot;</span>,
           <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;ru&quot;</span>
         },
         {
-          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">126</span>,
-          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Test testing 1&quot;</span>,
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">180</span>,
+          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Testing 1&quot;</span>,
           <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;tg&quot;</span>
         },
         {
-          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">125</span>,
-          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Test testing 1&quot;</span>,
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">179</span>,
+          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Testing 1&quot;</span>,
           <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;uz&quot;</span>
         }
       ],
@@ -904,33 +829,32 @@
       <span class="hljs-attr">&quot;default_locale&quot;</span>: <span class="hljs-string">&quot;ru&quot;</span>
     }
   ],
-  <span class="hljs-attr">&quot;total_count&quot;</span>: <span class="hljs-number">2</span>
+  <span class="hljs-attr">&quot;total_count&quot;</span>: <span class="hljs-number">1</span>
 }</code></pre>
             <h2 id="get-single-testing">Get single testing</h2>
             <h3 id="http-request-1">HTTP Request</h3>
             <p><code>GET https://api.najotapp.uz/v1/testing/{ID}</code></p>
             <pre class="highlight bash"><code>curl --request GET \
-  --url http://api.najot.test/v1/testing/{ID}</code></pre>
+  --url http://api.najotapp.uz/v1/testing/{ID}</code></pre>
             <blockquote>
                <p>The above command returns JSON structured like this:</p>
             </blockquote>
             <pre class="highlight json"><code>{
-  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">13</span>,
+  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">60</span>,
   <span class="hljs-attr">&quot;questions&quot;</span>: [
     {
-      <span class="hljs-attr">&quot;correct_choice_weight&quot;</span>: <span class="hljs-number">30</span>,
-      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">93</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">104</span>,
       <span class="hljs-attr">&quot;choices&quot;</span>: [
         {
           <span class="hljs-attr">&quot;translations&quot;</span>: {
             <span class="hljs-attr">&quot;ru&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;ert&quot;</span>
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 1&quot;</span>
             },
             <span class="hljs-attr">&quot;uz&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;rtyrty&quot;</span>
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 1&quot;</span>
             },
             <span class="hljs-attr">&quot;tg&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;rewr&quot;</span>
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 1&quot;</span>
             }
           },
           <span class="hljs-attr">&quot;weight&quot;</span>: <span class="hljs-number">10</span>
@@ -938,47 +862,32 @@
         {
           <span class="hljs-attr">&quot;translations&quot;</span>: {
             <span class="hljs-attr">&quot;ru&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;dfgdfg&quot;</span>
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 2&quot;</span>
             },
             <span class="hljs-attr">&quot;uz&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;bvcbcvb&quot;</span>
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 2&quot;</span>
             },
             <span class="hljs-attr">&quot;tg&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;eqwef&quot;</span>
-            }
-          },
-          <span class="hljs-attr">&quot;weight&quot;</span>: <span class="hljs-number">20</span>
-        },
-        {
-          <span class="hljs-attr">&quot;translations&quot;</span>: {
-            <span class="hljs-attr">&quot;ru&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;cvbsf&quot;</span>
-            },
-            <span class="hljs-attr">&quot;uz&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;fewf&quot;</span>
-            },
-            <span class="hljs-attr">&quot;tg&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;fasdvc&quot;</span>
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 2&quot;</span>
             }
           },
           <span class="hljs-attr">&quot;weight&quot;</span>: <span class="hljs-number">30</span>
         }
       ],
-      <span class="hljs-attr">&quot;correct_answer&quot;</span>: <span class="hljs-string">&quot;2&quot;</span>,
       <span class="hljs-attr">&quot;translations&quot;</span>: [
         {
-          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">277</span>,
-          <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Ques 1 RU&quot;</span>,
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">310</span>,
+          <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Question 1&quot;</span>,
           <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;ru&quot;</span>
         },
         {
-          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">279</span>,
-          <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Ques 1 TG&quot;</span>,
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">312</span>,
+          <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Question 1&quot;</span>,
           <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;tg&quot;</span>
         },
         {
-          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">278</span>,
-          <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Ques 1 UZ&quot;</span>,
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">311</span>,
+          <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Question 1&quot;</span>,
           <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;uz&quot;</span>
         }
       ],
@@ -987,19 +896,18 @@
       <span class="hljs-attr">&quot;default_locale&quot;</span>: <span class="hljs-string">&quot;ru&quot;</span>
     },
     {
-      <span class="hljs-attr">&quot;correct_choice_weight&quot;</span>: <span class="hljs-number">20</span>,
-      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">95</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">106</span>,
       <span class="hljs-attr">&quot;choices&quot;</span>: [
         {
           <span class="hljs-attr">&quot;translations&quot;</span>: {
             <span class="hljs-attr">&quot;ru&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;sdfsd&quot;</span>
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 1&quot;</span>
             },
             <span class="hljs-attr">&quot;uz&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;ggg&quot;</span>
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 1&quot;</span>
             },
             <span class="hljs-attr">&quot;tg&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;ddd&quot;</span>
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 1&quot;</span>
             }
           },
           <span class="hljs-attr">&quot;weight&quot;</span>: <span class="hljs-number">20</span>
@@ -1007,61 +915,32 @@
         {
           <span class="hljs-attr">&quot;translations&quot;</span>: {
             <span class="hljs-attr">&quot;ru&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;dsf&quot;</span>
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 2&quot;</span>
             },
             <span class="hljs-attr">&quot;uz&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;gfgfg&quot;</span>
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 2&quot;</span>
             },
             <span class="hljs-attr">&quot;tg&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;eerererer&quot;</span>
-            }
-          },
-          <span class="hljs-attr">&quot;weight&quot;</span>: <span class="hljs-number">20</span>
-        },
-        {
-          <span class="hljs-attr">&quot;translations&quot;</span>: {
-            <span class="hljs-attr">&quot;ru&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;cxvcx&quot;</span>
-            },
-            <span class="hljs-attr">&quot;uz&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;vcb&quot;</span>
-            },
-            <span class="hljs-attr">&quot;tg&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;df&quot;</span>
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Choice 2&quot;</span>
             }
           },
           <span class="hljs-attr">&quot;weight&quot;</span>: <span class="hljs-number">30</span>
-        },
-        {
-          <span class="hljs-attr">&quot;translations&quot;</span>: {
-            <span class="hljs-attr">&quot;ru&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;fdf&quot;</span>
-            },
-            <span class="hljs-attr">&quot;uz&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;ffffff&quot;</span>
-            },
-            <span class="hljs-attr">&quot;tg&quot;</span>: {
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;gfgfgfg&quot;</span>
-            }
-          },
-          <span class="hljs-attr">&quot;weight&quot;</span>: <span class="hljs-number">40</span>
         }
       ],
-      <span class="hljs-attr">&quot;correct_answer&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>,
       <span class="hljs-attr">&quot;translations&quot;</span>: [
         {
-          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">283</span>,
-          <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Ques 2 RU&quot;</span>,
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">316</span>,
+          <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Question 2&quot;</span>,
           <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;ru&quot;</span>
         },
         {
-          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">285</span>,
-          <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Ques 2 TG&quot;</span>,
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">318</span>,
+          <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Question 2&quot;</span>,
           <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;tg&quot;</span>
         },
         {
-          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">284</span>,
-          <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Ques 2 UZ&quot;</span>,
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">317</span>,
+          <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-string">&quot;Question 2&quot;</span>,
           <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;uz&quot;</span>
         }
       ],
@@ -1070,31 +949,73 @@
       <span class="hljs-attr">&quot;default_locale&quot;</span>: <span class="hljs-string">&quot;ru&quot;</span>
     }
   ],
+  <span class="hljs-attr">&quot;results&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;interval&quot;</span>: {
+        <span class="hljs-attr">&quot;min&quot;</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">&quot;max&quot;</span>: <span class="hljs-number">40</span>
+      },
+      <span class="hljs-attr">&quot;translations&quot;</span>: {
+        <span class="hljs-attr">&quot;ru&quot;</span>: {
+          <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 1&quot;</span>,
+          <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Desc 1&quot;</span>
+        },
+        <span class="hljs-attr">&quot;uz&quot;</span>: {
+          <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 1&quot;</span>,
+          <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Desc 1&quot;</span>
+        },
+        <span class="hljs-attr">&quot;tg&quot;</span>: {
+          <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 1&quot;</span>,
+          <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Desc 1&quot;</span>
+        }
+      }
+    },
+    {
+      <span class="hljs-attr">&quot;interval&quot;</span>: {
+        <span class="hljs-attr">&quot;min&quot;</span>: <span class="hljs-number">40</span>,
+        <span class="hljs-attr">&quot;max&quot;</span>: <span class="hljs-number">70</span>
+      },
+      <span class="hljs-attr">&quot;translations&quot;</span>: {
+        <span class="hljs-attr">&quot;ru&quot;</span>: {
+          <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 2&quot;</span>,
+          <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Desc 2&quot;</span>
+        },
+        <span class="hljs-attr">&quot;uz&quot;</span>: {
+          <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 2&quot;</span>,
+          <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Desc 2&quot;</span>
+        },
+        <span class="hljs-attr">&quot;tg&quot;</span>: {
+          <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Title 2&quot;</span>,
+          <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Desc 2&quot;</span>
+        }
+      }
+    }
+  ],
   <span class="hljs-attr">&quot;image&quot;</span>: {
-    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">4</span>,
-    <span class="hljs-attr">&quot;original_name&quot;</span>: <span class="hljs-string">&quot;City8&quot;</span>,
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">10</span>,
+    <span class="hljs-attr">&quot;original_name&quot;</span>: <span class="hljs-string">&quot;Colour6&quot;</span>,
     <span class="hljs-attr">&quot;mime_type&quot;</span>: <span class="hljs-string">&quot;image/jpeg&quot;</span>,
     <span class="hljs-attr">&quot;urls&quot;</span>: {
-      <span class="hljs-attr">&quot;original&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/original/image/ee/c0/a0/eec0a033d8aaeb4a7a93d433955977a358e7ddf62503d87c77e0ea9cca0ff659.jpg&quot;</span>,
-      <span class="hljs-attr">&quot;100x_&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/100x_/image/ee/c0/a0/eec0a033d8aaeb4a7a93d433955977a358e7ddf62503d87c77e0ea9cca0ff659.jpg&quot;</span>,
-      <span class="hljs-attr">&quot;300x_&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/300x_/image/ee/c0/a0/eec0a033d8aaeb4a7a93d433955977a358e7ddf62503d87c77e0ea9cca0ff659.jpg&quot;</span>,
-      <span class="hljs-attr">&quot;500x_&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/500x_/image/ee/c0/a0/eec0a033d8aaeb4a7a93d433955977a358e7ddf62503d87c77e0ea9cca0ff659.jpg&quot;</span>
+      <span class="hljs-attr">&quot;original&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/original/image/c2/30/c7/c230c71b25edf25741dc36eed90cb8509a27364292dda8bf70632a68f71556fa.jpg&quot;</span>,
+      <span class="hljs-attr">&quot;100x_&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/100x_/image/c2/30/c7/c230c71b25edf25741dc36eed90cb8509a27364292dda8bf70632a68f71556fa.jpg&quot;</span>,
+      <span class="hljs-attr">&quot;300x_&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/300x_/image/c2/30/c7/c230c71b25edf25741dc36eed90cb8509a27364292dda8bf70632a68f71556fa.jpg&quot;</span>,
+      <span class="hljs-attr">&quot;500x_&quot;</span>: <span class="hljs-string">&quot;http://api.najot.test/cache/images/500x_/image/c2/30/c7/c230c71b25edf25741dc36eed90cb8509a27364292dda8bf70632a68f71556fa.jpg&quot;</span>
     }
   },
   <span class="hljs-attr">&quot;translations&quot;</span>: [
     {
-      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">37</span>,
-      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Test 1 RU&quot;</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">178</span>,
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Testing 1&quot;</span>,
       <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;ru&quot;</span>
     },
     {
-      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">39</span>,
-      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Test 1 TG&quot;</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">180</span>,
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Testing 1&quot;</span>,
       <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;tg&quot;</span>
     },
     {
-      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">38</span>,
-      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Test 1 UZ&quot;</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">179</span>,
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Testing 1&quot;</span>,
       <span class="hljs-attr">&quot;locale&quot;</span>: <span class="hljs-string">&quot;uz&quot;</span>
     }
   ],
@@ -1107,30 +1028,28 @@
             <h3 id="http-request-2">HTTP Request</h3>
             <p><code>GET https://api.najotapp.uz/v1/testings/{ID}/scores</code></p>
             <pre class="highlight bash"><code>curl --request GET \
-  --url http://api.najot.test/v1/testings/13/scores \
+  --url http://api.najotapp.uz/v1/testings/{ID}/scores \
   --header <span class="hljs-string">&#x27;X-AUTH-TOKEN: qweqweqweqe123123dasd&#x27;</span></code></pre>
             <blockquote>
                <p>The above command returns JSON structured like this:</p>
             </blockquote>
             <pre class="highlight json"><code>{
-  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">3</span>,
-  <span class="hljs-attr">&quot;total_weight&quot;</span>: <span class="hljs-number">20</span>,
+  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">8</span>,
+  <span class="hljs-attr">&quot;total_weight&quot;</span>: <span class="hljs-number">40</span>,
   <span class="hljs-attr">&quot;answers&quot;</span>: [
     {
-      <span class="hljs-attr">&quot;is_correct&quot;</span>: <span class="hljs-literal">false</span>,
-      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">3</span>,
-      <span class="hljs-attr">&quot;testing_question&quot;</span>: <span class="hljs-number">93</span>,
-      <span class="hljs-attr">&quot;answer&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">11</span>,
+      <span class="hljs-attr">&quot;testing_question&quot;</span>: <span class="hljs-number">104</span>,
+      <span class="hljs-attr">&quot;answer&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>
     },
     {
-      <span class="hljs-attr">&quot;is_correct&quot;</span>: <span class="hljs-literal">true</span>,
-      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">4</span>,
-      <span class="hljs-attr">&quot;testing_question&quot;</span>: <span class="hljs-number">95</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">12</span>,
+      <span class="hljs-attr">&quot;testing_question&quot;</span>: <span class="hljs-number">106</span>,
       <span class="hljs-attr">&quot;answer&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>
     }
   ],
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;2020-11-09T19:43:24Z&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;2020-11-09T19:43:24Z&quot;</span>
+  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;2020-11-16T12:40:44Z&quot;</span>,
+  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;2020-11-16T12:40:44Z&quot;</span>
 }</code></pre>
             <h2 id="complete-testing-by-user">Complete testing by user</h2>
             <aside class=warning> This request requires authentication (X-AUTH-TOKEN header with firebase session key) </aside>
@@ -1154,44 +1073,96 @@
                </tbody>
             </table>
             <pre class="highlight bash"><code>curl --request POST \
-  --url http://api.najot.test/v1/testings/{ID}/complete \
+  --url http://api.najotapp.uz/v1/testings/{ID}/complete \
   --header <span class="hljs-string">&#x27;content-type: application/json&#x27;</span> \
   --header <span class="hljs-string">&#x27;x-auth-token: qweqweqweqe123123dasd&#x27;</span> \
   --data <span class="hljs-string">&#x27;{
-  &quot;answers&quot;: [
-    {
-      &quot;testingQuestion&quot;: {QUESTION_ID},
-      &quot;answer&quot;: 2
-    },
-    {
-      &quot;testingQuestion&quot;: {QUESTION_ID},
-      &quot;answer&quot;: 1
-    }
-  ]
-}&#x27;</span></code></pre>
+      &quot;answers&quot;: [
+        {
+          &quot;testingQuestion&quot;: {QUESTION_ID},
+          &quot;answer&quot;: 0
+        },
+        {
+          &quot;testingQuestion&quot;: {QUESTION_ID},
+          &quot;answer&quot;: 2
+        },
+        {
+          &quot;testingQuestion&quot;: {QUESTION_ID},
+          &quot;answer&quot;: 1
+        }
+      ]
+    }&#x27;</span></code></pre>
             <blockquote>
                <p>The above command returns JSON structured like this:</p>
             </blockquote>
             <pre class="highlight json"><code>{
-  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">5</span>,
-  <span class="hljs-attr">&quot;total_weight&quot;</span>: <span class="hljs-number">20</span>,
+  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">8</span>,
+  <span class="hljs-attr">&quot;total_weight&quot;</span>: <span class="hljs-number">40</span>,
   <span class="hljs-attr">&quot;answers&quot;</span>: [
     {
-      <span class="hljs-attr">&quot;is_correct&quot;</span>: <span class="hljs-literal">false</span>,
-      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">7</span>,
-      <span class="hljs-attr">&quot;testing_question&quot;</span>: <span class="hljs-number">93</span>,
-      <span class="hljs-attr">&quot;answer&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">11</span>,
+      <span class="hljs-attr">&quot;testing_question&quot;</span>: <span class="hljs-number">104</span>,
+      <span class="hljs-attr">&quot;answer&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>
     },
     {
-      <span class="hljs-attr">&quot;is_correct&quot;</span>: <span class="hljs-literal">true</span>,
-      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">8</span>,
-      <span class="hljs-attr">&quot;testing_question&quot;</span>: <span class="hljs-number">95</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">12</span>,
+      <span class="hljs-attr">&quot;testing_question&quot;</span>: <span class="hljs-number">106</span>,
       <span class="hljs-attr">&quot;answer&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>
     }
   ],
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;2020-11-10T11:45:53Z&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;2020-11-10T11:45:53Z&quot;</span>
+  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;2020-11-16T12:40:44Z&quot;</span>,
+  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;2020-11-16T12:40:44Z&quot;</span>
 }</code></pre>
+            <h1 id="logging">Logging</h1>
+            <h2 id="log-event">Log event</h2>
+            <h3 id="http-request">HTTP Request</h3>
+            <p><code>POST https://api.najotapp.uz/v1/log</code></p>
+            <h3 id="post-data">Post data</h3>
+            <table>
+               <thead>
+                  <tr>
+                     <th>Parameter</th>
+                     <th>Default</th>
+                     <th>Description</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>operation</td>
+                     <td>none</td>
+                     <td>Value can be one of these choices: help, important to know, testing, news</td>
+                  </tr>
+                  <tr>
+                     <td>deviceId</td>
+                     <td>none</td>
+                     <td>Device ID</td>
+                  </tr>
+                  <tr>
+                     <td>resourceId</td>
+                     <td>none</td>
+                     <td>(Optional) Resource ID</td>
+                  </tr>
+                  <tr>
+                     <td>lat</td>
+                     <td>none</td>
+                     <td>(Optional) Latitude</td>
+                  </tr>
+                  <tr>
+                     <td>lng</td>
+                     <td>none</td>
+                     <td>(Optional) Longitude</td>
+                  </tr>
+               </tbody>
+            </table>
+            <pre class="highlight bash"><code>curl --request POST \
+  --url http://api.najotapp.uz/v1/<span class="hljs-built_in">log</span> \
+  --header <span class="hljs-string">&#x27;content-type: application/json&#x27;</span> \
+  --data <span class="hljs-string">&#x27;{
+      &quot;operation&quot;: &quot;help&quot;,
+      &quot;deviceId&quot;: &quot;234242424234234&quot;,
+      &quot;lat&quot;: 46.234234,
+      &quot;lng&quot;: 36.4345534
+    }&#x27;</span></code></pre>
             <h1 id="errors">Errors</h1>
             <aside class=error> This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s front matter. Files are included in the order listed. </aside>
             <p>The Kittn API uses the following error codes:</p>

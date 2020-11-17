@@ -14,6 +14,7 @@ includes:
    - news
    - important_to_know
    - testing
+   - log
    - _errors
 
 search: true
