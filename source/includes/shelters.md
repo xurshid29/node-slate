@@ -19,21 +19,25 @@ curl --request GET \
   "items": [
     {
       "id": 2,
-      "administrative_area": "Bukhara",
-      "locality": "Bukhara",
-      "address_line": "Some street, 45",
-      "phone_number": "998881234567",
-      "latitude": "34.123123",
-      "longitude": "45.123231"
+      "address": {
+        "id": 13,
+        "administrativeArea": "Toshkent viloyati",
+        "locality": "Chinoz",
+        "latitude": 46.123123,
+        "longitude": 35.345345
+      },
+      "phone_number": "998881234567"
     },
     {
       "id": 1,
-      "administrative_area": "Samarkand",
-      "locality": "Jomboy",
-      "address_line": "Some street, 23",
-      "phone_number": "998991234567",
-      "latitude": "34.123123",
-      "longitude": "45.123231"
+      "address": {
+        "id": 14,
+        "administrativeArea": "Toshkent viloyati",
+        "locality": "Chinoz",
+        "latitude": 46.123123,
+        "longitude": 35.345345
+      },
+      "phone_number": "998991234567"
     }
   ],
   "total_count": 2
@@ -56,11 +60,13 @@ curl --request GET \
 ```json
 {
   "id": 1,
-  "administrative_area": "Samarkand",
-  "locality": "Jomboy",
-  "address_line": "Some street, 23",
-  "phone_number": "998991234567",
-  "latitude": "34.123123",
-  "longitude": "45.123231"
+  "address": {
+    "id": 34,
+    "administrativeArea": "Toshkent viloyati",
+    "locality": "Chinoz",
+    "latitude": 46.123123,
+    "longitude": 35.345345
+  },
+  "phone_number": "998991234567"
 }
 ```
