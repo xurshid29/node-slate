@@ -54,29 +54,19 @@
                      <td>Name of the user</td>
                   </tr>
                   <tr>
-                     <td>region</td>
-                     <td>none</td>
-                     <td>Region of the user</td>
-                  </tr>
-                  <tr>
-                     <td>regionLat</td>
-                     <td>none</td>
-                     <td>Latitude</td>
-                  </tr>
-                  <tr>
-                     <td>regionLng</td>
-                     <td>none</td>
-                     <td>Longitude</td>
-                  </tr>
-                  <tr>
                      <td>phoneNumber</td>
                      <td>none</td>
                      <td>Verified phone number of the user</td>
                   </tr>
                   <tr>
-                     <td>firebaseToken</td>
+                     <td>deviceId</td>
                      <td>none</td>
-                     <td>Token from firebase response</td>
+                     <td>Device ID</td>
+                  </tr>
+                  <tr>
+                     <td>address</td>
+                     <td>none</td>
+                     <td>Address object</td>
                   </tr>
                </tbody>
             </table>
@@ -84,13 +74,16 @@
   --url https://api.najotapp.uz/v1/users \
   --header <span class="hljs-string">&#x27;content-type: application/json&#x27;</span> \
   --data <span class="hljs-string">&#x27;{
-  &quot;name&quot;: &quot;Test1&quot;,
-  &quot;region&quot;: &quot;Tashkent&quot;,
-  &quot;regionLat&quot;: 46.123123,
-  &quot;regionLng&quot;: 35.345345,
-  &quot;phoneNumber&quot;: &quot;998998597873&quot;,
-  &quot;firebaseToken&quot;: &quot;qweqweqweqe123123dasd1&quot;
-}&#x27;</span></code></pre>
+      &quot;name&quot;: &quot;Firstname1 Lastname1&quot;,
+      &quot;phoneNumber&quot;: &quot;998998597873&quot;,
+      &quot;deviceId&quot;: &quot;12312313123123&quot;,
+      &quot;address&quot;: {
+        &quot;administrativeArea&quot;: &quot;Toshkent viloyati&quot;,
+        &quot;locality&quot;: &quot;Chinoz&quot;,
+        &quot;latitude&quot;: 46.123123,
+        &quot;longitude&quot;: 35.345345
+      }
+    }&#x27;</span></code></pre>
             <blockquote>
                <p>The above command returns JSON structured like this:</p>
             </blockquote>
@@ -101,9 +94,13 @@
   <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">&quot;birth_day&quot;</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">&quot;phone_number&quot;</span>: <span class="hljs-string">&quot;998998597873&quot;</span>,
-  <span class="hljs-attr">&quot;region&quot;</span>: <span class="hljs-string">&quot;Tashkent&quot;</span>,
-  <span class="hljs-attr">&quot;region_lat&quot;</span>: <span class="hljs-string">&quot;46.123123&quot;</span>,
-  <span class="hljs-attr">&quot;region_lng&quot;</span>: <span class="hljs-string">&quot;35.345345&quot;</span>,
+  <span class="hljs-attr">&quot;address&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">12</span>,
+    <span class="hljs-attr">&quot;administrativeArea&quot;</span>: <span class="hljs-string">&quot;Toshkent viloyati&quot;</span>,
+    <span class="hljs-attr">&quot;locality&quot;</span>: <span class="hljs-string">&quot;Chinoz&quot;</span>,
+    <span class="hljs-attr">&quot;latitude&quot;</span>: <span class="hljs-number">46.123123</span>,
+    <span class="hljs-attr">&quot;longitude&quot;</span>: <span class="hljs-number">35.345345</span>
+  },
   <span class="hljs-attr">&quot;verified&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;last_active_time&quot;</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-literal">null</span>,
@@ -128,9 +125,13 @@
   <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">&quot;birth_day&quot;</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">&quot;phone_number&quot;</span>: <span class="hljs-string">&quot;998998597872&quot;</span>,
-  <span class="hljs-attr">&quot;region&quot;</span>: <span class="hljs-string">&quot;Tashkent&quot;</span>,
-  <span class="hljs-attr">&quot;region_lat&quot;</span>: <span class="hljs-string">&quot;46.123123&quot;</span>,
-  <span class="hljs-attr">&quot;region_lng&quot;</span>: <span class="hljs-string">&quot;35.345345&quot;</span>,
+  <span class="hljs-attr">&quot;address&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">12</span>,
+    <span class="hljs-attr">&quot;administrativeArea&quot;</span>: <span class="hljs-string">&quot;Toshkent viloyati&quot;</span>,
+    <span class="hljs-attr">&quot;locality&quot;</span>: <span class="hljs-string">&quot;Chinoz&quot;</span>,
+    <span class="hljs-attr">&quot;latitude&quot;</span>: <span class="hljs-number">46.123123</span>,
+    <span class="hljs-attr">&quot;longitude&quot;</span>: <span class="hljs-number">35.345345</span>
+  },
   <span class="hljs-attr">&quot;verified&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;last_active_time&quot;</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-literal">null</span>,
@@ -175,19 +176,9 @@
                      <td>Name of the user</td>
                   </tr>
                   <tr>
-                     <td>region</td>
+                     <td>address</td>
                      <td>none</td>
-                     <td>Region of the user</td>
-                  </tr>
-                  <tr>
-                     <td>regionLat</td>
-                     <td>none</td>
-                     <td>Latitude</td>
-                  </tr>
-                  <tr>
-                     <td>regionLng</td>
-                     <td>none</td>
-                     <td>Longitude</td>
+                     <td>Address object</td>
                   </tr>
                </tbody>
             </table>
@@ -196,9 +187,12 @@
   --header <span class="hljs-string">&#x27;content-type: application/json&#x27;</span> \
   --data <span class="hljs-string">&#x27;{
   &quot;name&quot;: &quot;Test1&quot;,
-  &quot;region&quot;: &quot;Tashkent&quot;,
-  &quot;regionLat&quot;: 46.123123,
-  &quot;regionLng&quot;: 35.345345
+  &quot;address&quot;: {
+    &quot;administrativeArea&quot;: &quot;Toshkent viloyati&quot;,
+    &quot;locality&quot;: &quot;Chinoz&quot;,
+    &quot;latitude&quot;: 46.123123,
+    &quot;longitude&quot;: 35.345345
+  }
 }&#x27;</span></code></pre>
             <blockquote>
                <p>The above command returns JSON structured like this:</p>
@@ -210,9 +204,13 @@
   <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">&quot;birth_day&quot;</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">&quot;phone_number&quot;</span>: <span class="hljs-string">&quot;998998597873&quot;</span>,
-  <span class="hljs-attr">&quot;region&quot;</span>: <span class="hljs-string">&quot;Tashkent&quot;</span>,
-  <span class="hljs-attr">&quot;region_lat&quot;</span>: <span class="hljs-string">&quot;46.123123&quot;</span>,
-  <span class="hljs-attr">&quot;region_lng&quot;</span>: <span class="hljs-string">&quot;35.345345&quot;</span>,
+  <span class="hljs-attr">&quot;address&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">12</span>,
+    <span class="hljs-attr">&quot;administrativeArea&quot;</span>: <span class="hljs-string">&quot;Toshkent viloyati&quot;</span>,
+    <span class="hljs-attr">&quot;locality&quot;</span>: <span class="hljs-string">&quot;Chinoz&quot;</span>,
+    <span class="hljs-attr">&quot;latitude&quot;</span>: <span class="hljs-number">46.123123</span>,
+    <span class="hljs-attr">&quot;longitude&quot;</span>: <span class="hljs-number">35.345345</span>
+  },
   <span class="hljs-attr">&quot;verified&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;last_active_time&quot;</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-literal">null</span>,
@@ -241,19 +239,9 @@
                      <td>Name of the user</td>
                   </tr>
                   <tr>
-                     <td>region</td>
+                     <td>address</td>
                      <td>none</td>
-                     <td>Region of the user</td>
-                  </tr>
-                  <tr>
-                     <td>regionLat</td>
-                     <td>none</td>
-                     <td>Latitude</td>
-                  </tr>
-                  <tr>
-                     <td>regionLng</td>
-                     <td>none</td>
-                     <td>Longitude</td>
+                     <td>Address object</td>
                   </tr>
                </tbody>
             </table>
@@ -262,9 +250,12 @@
   --header <span class="hljs-string">&#x27;content-type: application/json&#x27;</span> \
   --data <span class="hljs-string">&#x27;{
   &quot;name&quot;: &quot;Test1&quot;,
-  &quot;region&quot;: &quot;Tashkent&quot;,
-  &quot;regionLat&quot;: 46.123123,
-  &quot;regionLng&quot;: 35.345345
+  &quot;address&quot;: {
+    &quot;administrativeArea&quot;: &quot;Toshkent viloyati&quot;,
+    &quot;locality&quot;: &quot;Chinoz&quot;,
+    &quot;latitude&quot;: 46.123123,
+    &quot;longitude&quot;: 35.345345
+  }
 }&#x27;</span></code></pre>
             <blockquote>
                <p>The above command returns JSON structured like this:</p>
@@ -276,9 +267,13 @@
   <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">&quot;birth_day&quot;</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">&quot;phone_number&quot;</span>: <span class="hljs-string">&quot;998998597873&quot;</span>,
-  <span class="hljs-attr">&quot;region&quot;</span>: <span class="hljs-string">&quot;Tashkent&quot;</span>,
-  <span class="hljs-attr">&quot;region_lat&quot;</span>: <span class="hljs-string">&quot;46.123123&quot;</span>,
-  <span class="hljs-attr">&quot;region_lng&quot;</span>: <span class="hljs-string">&quot;35.345345&quot;</span>,
+  <span class="hljs-attr">&quot;address&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">12</span>,
+    <span class="hljs-attr">&quot;administrativeArea&quot;</span>: <span class="hljs-string">&quot;Toshkent viloyati&quot;</span>,
+    <span class="hljs-attr">&quot;locality&quot;</span>: <span class="hljs-string">&quot;Chinoz&quot;</span>,
+    <span class="hljs-attr">&quot;latitude&quot;</span>: <span class="hljs-number">46.123123</span>,
+    <span class="hljs-attr">&quot;longitude&quot;</span>: <span class="hljs-number">35.345345</span>
+  },
   <span class="hljs-attr">&quot;verified&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;last_active_time&quot;</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-literal">null</span>,
@@ -312,20 +307,20 @@
   --url http://api.najot.test/v1/users/{ID} \
   --header <span class="hljs-string">&#x27;content-type: application/json&#x27;</span> \
   --data <span class="hljs-string">&#x27;{
-  &quot;contacts&quot;: [
-    {
-      &quot;whoIs&quot;: &quot;Brother 1&quot;,
-      &quot;phoneNumber&quot;: &quot;998991234567&quot;
-    },
-    {
-      &quot;whoIs&quot;: &quot;Brother 2&quot;,
-      &quot;phoneNumber&quot;: &quot;998991234568&quot;
-    },
-    {
-      &quot;whoIs&quot;: &quot;Brother 3&quot;,
-      &quot;phoneNumber&quot;: &quot;998991234569&quot;
-    }
-  ]
+      &quot;contacts&quot;: [
+        {
+          &quot;whoIs&quot;: &quot;Brother 1&quot;,
+          &quot;phoneNumber&quot;: &quot;998991234567&quot;
+        },
+        {
+          &quot;whoIs&quot;: &quot;Brother 2&quot;,
+          &quot;phoneNumber&quot;: &quot;998991234568&quot;
+        },
+        {
+          &quot;whoIs&quot;: &quot;Brother 3&quot;,
+          &quot;phoneNumber&quot;: &quot;998991234569&quot;
+        }
+      ]
 }&#x27;</span></code></pre>
             <blockquote>
                <p>The above command returns JSON structured like this:</p>
@@ -337,9 +332,13 @@
   <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">&quot;birth_day&quot;</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">&quot;phone_number&quot;</span>: <span class="hljs-string">&quot;998998597872&quot;</span>,
-  <span class="hljs-attr">&quot;region&quot;</span>: <span class="hljs-string">&quot;Tashkent&quot;</span>,
-  <span class="hljs-attr">&quot;region_lat&quot;</span>: <span class="hljs-string">&quot;46.123123&quot;</span>,
-  <span class="hljs-attr">&quot;region_lng&quot;</span>: <span class="hljs-string">&quot;35.345345&quot;</span>,
+  <span class="hljs-attr">&quot;address&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">12</span>,
+    <span class="hljs-attr">&quot;administrativeArea&quot;</span>: <span class="hljs-string">&quot;Toshkent viloyati&quot;</span>,
+    <span class="hljs-attr">&quot;locality&quot;</span>: <span class="hljs-string">&quot;Chinoz&quot;</span>,
+    <span class="hljs-attr">&quot;latitude&quot;</span>: <span class="hljs-number">46.123123</span>,
+    <span class="hljs-attr">&quot;longitude&quot;</span>: <span class="hljs-number">35.345345</span>
+  },
   <span class="hljs-attr">&quot;verified&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;last_active_time&quot;</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-literal">null</span>,
@@ -379,21 +378,25 @@
   <span class="hljs-attr">&quot;items&quot;</span>: [
     {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">2</span>,
-      <span class="hljs-attr">&quot;administrative_area&quot;</span>: <span class="hljs-string">&quot;Bukhara&quot;</span>,
-      <span class="hljs-attr">&quot;locality&quot;</span>: <span class="hljs-string">&quot;Bukhara&quot;</span>,
-      <span class="hljs-attr">&quot;address_line&quot;</span>: <span class="hljs-string">&quot;Some street, 45&quot;</span>,
-      <span class="hljs-attr">&quot;phone_number&quot;</span>: <span class="hljs-string">&quot;998881234567&quot;</span>,
-      <span class="hljs-attr">&quot;latitude&quot;</span>: <span class="hljs-string">&quot;34.123123&quot;</span>,
-      <span class="hljs-attr">&quot;longitude&quot;</span>: <span class="hljs-string">&quot;45.123231&quot;</span>
+      <span class="hljs-attr">&quot;address&quot;</span>: {
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">13</span>,
+        <span class="hljs-attr">&quot;administrativeArea&quot;</span>: <span class="hljs-string">&quot;Toshkent viloyati&quot;</span>,
+        <span class="hljs-attr">&quot;locality&quot;</span>: <span class="hljs-string">&quot;Chinoz&quot;</span>,
+        <span class="hljs-attr">&quot;latitude&quot;</span>: <span class="hljs-number">46.123123</span>,
+        <span class="hljs-attr">&quot;longitude&quot;</span>: <span class="hljs-number">35.345345</span>
+      },
+      <span class="hljs-attr">&quot;phone_number&quot;</span>: <span class="hljs-string">&quot;998881234567&quot;</span>
     },
     {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
-      <span class="hljs-attr">&quot;administrative_area&quot;</span>: <span class="hljs-string">&quot;Samarkand&quot;</span>,
-      <span class="hljs-attr">&quot;locality&quot;</span>: <span class="hljs-string">&quot;Jomboy&quot;</span>,
-      <span class="hljs-attr">&quot;address_line&quot;</span>: <span class="hljs-string">&quot;Some street, 23&quot;</span>,
-      <span class="hljs-attr">&quot;phone_number&quot;</span>: <span class="hljs-string">&quot;998991234567&quot;</span>,
-      <span class="hljs-attr">&quot;latitude&quot;</span>: <span class="hljs-string">&quot;34.123123&quot;</span>,
-      <span class="hljs-attr">&quot;longitude&quot;</span>: <span class="hljs-string">&quot;45.123231&quot;</span>
+      <span class="hljs-attr">&quot;address&quot;</span>: {
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">14</span>,
+        <span class="hljs-attr">&quot;administrativeArea&quot;</span>: <span class="hljs-string">&quot;Toshkent viloyati&quot;</span>,
+        <span class="hljs-attr">&quot;locality&quot;</span>: <span class="hljs-string">&quot;Chinoz&quot;</span>,
+        <span class="hljs-attr">&quot;latitude&quot;</span>: <span class="hljs-number">46.123123</span>,
+        <span class="hljs-attr">&quot;longitude&quot;</span>: <span class="hljs-number">35.345345</span>
+      },
+      <span class="hljs-attr">&quot;phone_number&quot;</span>: <span class="hljs-string">&quot;998991234567&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;total_count&quot;</span>: <span class="hljs-number">2</span>
@@ -408,12 +411,14 @@
             </blockquote>
             <pre class="highlight json"><code>{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
-  <span class="hljs-attr">&quot;administrative_area&quot;</span>: <span class="hljs-string">&quot;Samarkand&quot;</span>,
-  <span class="hljs-attr">&quot;locality&quot;</span>: <span class="hljs-string">&quot;Jomboy&quot;</span>,
-  <span class="hljs-attr">&quot;address_line&quot;</span>: <span class="hljs-string">&quot;Some street, 23&quot;</span>,
-  <span class="hljs-attr">&quot;phone_number&quot;</span>: <span class="hljs-string">&quot;998991234567&quot;</span>,
-  <span class="hljs-attr">&quot;latitude&quot;</span>: <span class="hljs-string">&quot;34.123123&quot;</span>,
-  <span class="hljs-attr">&quot;longitude&quot;</span>: <span class="hljs-string">&quot;45.123231&quot;</span>
+  <span class="hljs-attr">&quot;address&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">34</span>,
+    <span class="hljs-attr">&quot;administrativeArea&quot;</span>: <span class="hljs-string">&quot;Toshkent viloyati&quot;</span>,
+    <span class="hljs-attr">&quot;locality&quot;</span>: <span class="hljs-string">&quot;Chinoz&quot;</span>,
+    <span class="hljs-attr">&quot;latitude&quot;</span>: <span class="hljs-number">46.123123</span>,
+    <span class="hljs-attr">&quot;longitude&quot;</span>: <span class="hljs-number">35.345345</span>
+  },
+  <span class="hljs-attr">&quot;phone_number&quot;</span>: <span class="hljs-string">&quot;998991234567&quot;</span>
 }</code></pre>
             <h1 id="news">News</h1>
             <h2 id="get-all-news">Get all news</h2>
@@ -1024,7 +1029,7 @@
   <span class="hljs-attr">&quot;default_locale&quot;</span>: <span class="hljs-string">&quot;ru&quot;</span>
 }</code></pre>
             <h2 id="check-scores-by-user">Check scores by user</h2>
-            <aside class=warning> This request requires authentication (X-AUTH-TOKEN header with firebase session key) </aside>
+            <aside class=warning> This request requires authentication (X-AUTH-TOKEN header with Device Id) </aside>
             <h3 id="http-request-2">HTTP Request</h3>
             <p><code>GET https://api.najotapp.uz/v1/testings/{ID}/scores</code></p>
             <pre class="highlight bash"><code>curl --request GET \
@@ -1052,7 +1057,7 @@
   <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;2020-11-16T12:40:44Z&quot;</span>
 }</code></pre>
             <h2 id="complete-testing-by-user">Complete testing by user</h2>
-            <aside class=warning> This request requires authentication (X-AUTH-TOKEN header with firebase session key) </aside>
+            <aside class=warning> This request requires authentication (X-AUTH-TOKEN header with Device ID) </aside>
             <h3 id="http-request-3">HTTP Request</h3>
             <p><code>POST https://api.najotapp.uz/v1/testings/{ID}/complete</code></p>
             <h3 id="post-data">Post data</h3>
@@ -1113,6 +1118,65 @@
   <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;2020-11-16T12:40:44Z&quot;</span>,
   <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;2020-11-16T12:40:44Z&quot;</span>
 }</code></pre>
+            <h1 id="help-event">HELP event</h1>
+            <h2 id="log-help-event">Log help event</h2>
+            <aside class=warning> This request requires authentication (X-AUTH-TOKEN header with Device Id) </aside>
+            <h3 id="http-request">HTTP Request</h3>
+            <p><code>POST https://api.najotapp.uz/v1/help</code></p>
+            <h3 id="post-data">Post data</h3>
+            <table>
+               <thead>
+                  <tr>
+                     <th>Parameter</th>
+                     <th>Default</th>
+                     <th>Description</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>address</td>
+                     <td>none</td>
+                     <td>Address object</td>
+                  </tr>
+                  <tr>
+                     <td>deviceId</td>
+                     <td>none</td>
+                     <td>Device ID</td>
+                  </tr>
+                  <tr>
+                     <td>helpCenterRequired</td>
+                     <td>none</td>
+                     <td>Value can be true, or false</td>
+                  </tr>
+                  <tr>
+                     <td>helpContactsCount</td>
+                     <td>none</td>
+                     <td>Sent contacts count</td>
+                  </tr>
+                  <tr>
+                     <td>time</td>
+                     <td>none</td>
+                     <td>Created time</td>
+                  </tr>
+               </tbody>
+            </table>
+            <pre class="highlight bash"><code>curl --request POST \
+  --url http://api.najotapp.uz/v1/<span class="hljs-built_in">help</span> \
+  --header <span class="hljs-string">&#x27;content-type: application/json&#x27;</span> \
+  --header <span class="hljs-string">&#x27;x-auth-token: qweqweqweqe123123dasd&#x27;</span> \
+  --data <span class="hljs-string">&#x27;{
+    &quot;address&quot;: {
+      &quot;administrativeArea&quot;: &quot;Toshkent viloyati&quot;,
+      &quot;locality&quot;: &quot;Chinoz&quot;,
+      &quot;latitude&quot;: 46.123123,
+      &quot;longitude&quot;: 35.345345
+    },
+    &quot;deviceId&quot;: &quot;qweqweqweqe123123dasd&quot;,
+    &quot;helpCenterRequired&quot;: true,
+    &quot;helpContactsCount&quot;: 3,
+    &quot;time&quot;: &quot;2020/02/04 13:45:34&quot;
+  }&#x27;</span></code></pre>
+            <aside class=warning> This request return an empty response </aside>
             <h1 id="logging">Logging</h1>
             <h2 id="log-event">Log event</h2>
             <h3 id="http-request">HTTP Request</h3>
