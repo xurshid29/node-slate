@@ -11,24 +11,25 @@
 Parameter | Default | Description
 --------- | ------- | -----------
 name | none | Name of the user
-region | none | Region of the user
-regionLat | none | (Optional) Latitude
-regionLng | none | (Optional) Longitude
 phoneNumber | none | Verified phone number of the user
 deviceId | none | Device ID
+address | none | Address object
 
 ```bash
 curl --request POST \
   --url https://api.najotapp.uz/v1/users \
   --header 'content-type: application/json' \
   --data '{
-  "name": "Test1",
-  "region": "Tashkent",
-  "regionLat": 46.123123,
-  "regionLng": 35.345345,
-  "phoneNumber": "998998597873",
-  "deviceId": "12312313123123"
-}'
+      "name": "Firstname1 Lastname1",
+      "phoneNumber": "998998597873",
+      "deviceId": "12312313123123",
+      "address": {
+        "administrativeArea": "Toshkent viloyati",
+        "locality": "Chinoz",
+        "latitude": 46.123123,
+        "longitude": 35.345345
+      }
+    }'
 ```
 
 > The above command returns JSON structured like this:
@@ -41,9 +42,13 @@ curl --request POST \
   "gender": null,
   "birth_day": null,
   "phone_number": "998998597873",
-  "region": "Tashkent",
-  "region_lat": "46.123123",
-  "region_lng": "35.345345",
+  "address": {
+    "id": 12,
+    "administrativeArea": "Toshkent viloyati",
+    "locality": "Chinoz",
+    "latitude": 46.123123,
+    "longitude": 35.345345
+  },
   "verified": true,
   "last_active_time": null,
   "avatar": null,
@@ -76,9 +81,13 @@ curl --request GET \
   "gender": null,
   "birth_day": null,
   "phone_number": "998998597872",
-  "region": "Tashkent",
-  "region_lat": "46.123123",
-  "region_lng": "35.345345",
+  "address": {
+    "id": 12,
+    "administrativeArea": "Toshkent viloyati",
+    "locality": "Chinoz",
+    "latitude": 46.123123,
+    "longitude": 35.345345
+  },
   "verified": true,
   "last_active_time": null,
   "avatar": null,
@@ -117,9 +126,7 @@ curl --request GET \
 Parameter | Default | Description
 --------- | ------- | -----------
 name | none | Name of the user
-region | none | Region of the user
-regionLat | none | (Optional) Latitude
-regionLng | none | (Optional) Longitude
+address | none | Address object
 
 ```bash
 curl --request PUT \
@@ -127,9 +134,12 @@ curl --request PUT \
   --header 'content-type: application/json' \
   --data '{
   "name": "Test1",
-  "region": "Tashkent",
-  "regionLat": 46.123123,
-  "regionLng": 35.345345
+  "address": {
+    "administrativeArea": "Toshkent viloyati",
+    "locality": "Chinoz",
+    "latitude": 46.123123,
+    "longitude": 35.345345
+  }
 }'
 ```
 
@@ -143,9 +153,13 @@ curl --request PUT \
   "gender": null,
   "birth_day": null,
   "phone_number": "998998597873",
-  "region": "Tashkent",
-  "region_lat": "46.123123",
-  "region_lng": "35.345345",
+  "address": {
+    "id": 12,
+    "administrativeArea": "Toshkent viloyati",
+    "locality": "Chinoz",
+    "latitude": 46.123123,
+    "longitude": 35.345345
+  },
   "verified": true,
   "last_active_time": null,
   "avatar": null,
@@ -168,9 +182,7 @@ curl --request PUT \
 Parameter | Default | Description
 --------- | ------- | -----------
 name | none | Name of the user
-region | none | Region of the user
-regionLat | none | (Optional) Latitude
-regionLng | none | (Optional) Longitude
+address | none | Address object
 
 ```bash
 curl --request PATCH \
@@ -178,9 +190,12 @@ curl --request PATCH \
   --header 'content-type: application/json' \
   --data '{
   "name": "Test1",
-  "region": "Tashkent",
-  "regionLat": 46.123123,
-  "regionLng": 35.345345
+  "address": {
+    "administrativeArea": "Toshkent viloyati",
+    "locality": "Chinoz",
+    "latitude": 46.123123,
+    "longitude": 35.345345
+  }
 }'
 ```
 
@@ -194,9 +209,13 @@ curl --request PATCH \
   "gender": null,
   "birth_day": null,
   "phone_number": "998998597873",
-  "region": "Tashkent",
-  "region_lat": "46.123123",
-  "region_lng": "35.345345",
+  "address": {
+    "id": 12,
+    "administrativeArea": "Toshkent viloyati",
+    "locality": "Chinoz",
+    "latitude": 46.123123,
+    "longitude": 35.345345
+  },
   "verified": true,
   "last_active_time": null,
   "avatar": null,
@@ -252,9 +271,13 @@ curl --request PATCH \
   "gender": null,
   "birth_day": null,
   "phone_number": "998998597872",
-  "region": "Tashkent",
-  "region_lat": "46.123123",
-  "region_lng": "35.345345",
+  "address": {
+    "id": 12,
+    "administrativeArea": "Toshkent viloyati",
+    "locality": "Chinoz",
+    "latitude": 46.123123,
+    "longitude": 35.345345
+  },
   "verified": true,
   "last_active_time": null,
   "avatar": null,
