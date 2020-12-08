@@ -2,23 +2,23 @@
 
 ## Log help event
 
-<aside class=warning>
-This request requires authentication (X-AUTH-TOKEN header with Device Id)
-</aside>
-
 ### HTTP Request
 
 `POST https://api.najotapp.uz/v1/help`
 
 ### Post data
 
-Parameter | Default | Description
---------- | ------- | -----------
-address | none    | Address object 
-deviceId  | none    | Device ID
-helpCenterRequired  | none    | Value can be true, or false
-helpContactsCount  | none    | Sent contacts count
-time  | none    | Created time
+Parameter| Required | Default | Description
+--------- | ------- | ------- | -----------
+address | Yes | none    | Address object 
+deviceId | Yes  | none    | Device ID
+helpCenterRequired | Yes  | none    | values - true/false
+helpContactsCount | Yes | none    | Sent contacts count
+time | Yes | none    | Created time, format - Y/m/d H:i:s
+anonymous | Yes | none | Type of the user, values - true/false
+accuracy | No | none | Geolocation accuracy
+ip | No | none | Client IP address
+phoneModel | No | none | Client phone model
 
 ```bash
 curl --request POST \
@@ -35,7 +35,11 @@ curl --request POST \
     "deviceId": "qweqweqweqe123123dasd",
     "helpCenterRequired": true,
     "helpContactsCount": 3,
-    "time": "2020/02/04 13:45:34"
+    "time": "2020/02/04 13:45:34",
+    "anonymous": true,
+    "accuracy": "50",
+    "ip": "123.12.12.12",
+    "phoneModel": "ASasddasd sdf"
   }'
 ```
 
