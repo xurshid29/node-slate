@@ -16,6 +16,7 @@ includes:
    - testing
    - help
    - log
+   - regions
    - _errors
 
 search: true
