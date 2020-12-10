@@ -11,6 +11,7 @@ includes:
    - main
    - user
    - shelters
+   - category
    - news
    - important_to_know
    - testing
