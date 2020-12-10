@@ -8,7 +8,7 @@
 
 ```bash
 curl --request GET \
-  --url 'http://api.najot.test/v1/important-to-know?category=cat%202'
+  --url 'http://api.najot.test/v1/important-to-know?category=3'
 ```
 
 > The above command returns JSON structured like this:
@@ -19,12 +19,48 @@ curl --request GET \
   "items": [
     {
       "id": 26,
-      "category": "cat 2",
+      "category": {
+        "id": 3,
+        "image": {
+          "id": 11,
+          "original_name": "City8",
+          "mime_type": "image/jpeg",
+          "urls": {
+            "original": "http://api.najot.test/cache/images/original/image/be/d1/4b/bed14bcfb43cd9b94cdbfe1809ae8950610bdbeafe71c5406bac3e91cea155a2.jpg",
+            "100x_": "http://api.najot.test/cache/images/100x_/image/be/d1/4b/bed14bcfb43cd9b94cdbfe1809ae8950610bdbeafe71c5406bac3e91cea155a2.jpg",
+            "300x_": "http://api.najot.test/cache/images/300x_/image/be/d1/4b/bed14bcfb43cd9b94cdbfe1809ae8950610bdbeafe71c5406bac3e91cea155a2.jpg",
+            "500x_": "http://api.najot.test/cache/images/500x_/image/be/d1/4b/bed14bcfb43cd9b94cdbfe1809ae8950610bdbeafe71c5406bac3e91cea155a2.jpg"
+          }
+        },
+        "translations": [
+          {
+            "id": 7,
+            "title": "Category 1",
+            "description": "Category 1",
+            "locale": "ru"
+          },
+          {
+            "id": 9,
+            "title": "Category 1",
+            "description": "Category 1",
+            "locale": "tg"
+          },
+          {
+            "id": 8,
+            "title": "Category 1",
+            "description": "Category 1",
+            "locale": "uz"
+          }
+        ],
+        "new_translations": null,
+        "current_locale": "ru",
+        "default_locale": "ru"
+      },
       "translations": [
         {
           "id": 51,
           "title": "Title 2 RU",
-          "body": "Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus.",
+          "body": "Body content",
           "locale": "ru"
         },
         {
@@ -36,7 +72,7 @@ curl --request GET \
         {
           "id": 52,
           "title": "Title 2 UZ",
-          "body": "Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit.",
+          "body": "BODY Content",
           "locale": "uz"
         }
       ],
@@ -65,12 +101,48 @@ curl --request GET \
 ```json
 {
   "id": 26,
-  "category": "cat 2",
+  "category": {
+    "id": 3,
+    "image": {
+      "id": 11,
+      "original_name": "City8",
+      "mime_type": "image/jpeg",
+      "urls": {
+        "original": "http://api.najot.test/cache/images/original/image/be/d1/4b/bed14bcfb43cd9b94cdbfe1809ae8950610bdbeafe71c5406bac3e91cea155a2.jpg",
+        "100x_": "http://api.najot.test/cache/images/100x_/image/be/d1/4b/bed14bcfb43cd9b94cdbfe1809ae8950610bdbeafe71c5406bac3e91cea155a2.jpg",
+        "300x_": "http://api.najot.test/cache/images/300x_/image/be/d1/4b/bed14bcfb43cd9b94cdbfe1809ae8950610bdbeafe71c5406bac3e91cea155a2.jpg",
+        "500x_": "http://api.najot.test/cache/images/500x_/image/be/d1/4b/bed14bcfb43cd9b94cdbfe1809ae8950610bdbeafe71c5406bac3e91cea155a2.jpg"
+      }
+    },
+    "translations": [
+      {
+        "id": 7,
+        "title": "Category 1",
+        "description": "Category 1",
+        "locale": "ru"
+      },
+      {
+        "id": 9,
+        "title": "Category 1",
+        "description": "Category 1",
+        "locale": "tg"
+      },
+      {
+        "id": 8,
+        "title": "Category 1",
+        "description": "Category 1",
+        "locale": "uz"
+      }
+    ],
+    "new_translations": null,
+    "current_locale": "ru",
+    "default_locale": "ru"
+  },
   "translations": [
     {
       "id": 51,
       "title": "Title 2 RU",
-      "body": "Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus.",
+      "body": "Body content",
       "locale": "ru"
     },
     {
@@ -82,7 +154,7 @@ curl --request GET \
     {
       "id": 52,
       "title": "Title 2 UZ",
-      "body": "Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit.",
+      "body": "BODY Content",
       "locale": "uz"
     }
   ],
