@@ -8,7 +8,7 @@
 
 ```bash
 curl --request GET \
-  --url http://api.najot.test/v1/shelters
+  --url http://api.najot.test/v1/shelters?address[administrativeArea]=Toshkent viloyati
 ```
 
 > The above command returns JSON structured like this:
