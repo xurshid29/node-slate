@@ -1,6 +1,6 @@
 # User
 
-## Post new user
+## Post new user (or update existing by device_id)
 
 ### HTTP Request
 
