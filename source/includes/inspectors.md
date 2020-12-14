@@ -19,11 +19,11 @@ curl --request GET \
   "items": [
     {
       "id": 857,
-      "status": "approved",
       "first_name": "Севара",
       "last_name": "Садуллаева",
       "middle_name": "Абдулакимовна",
-      "phone_number": "998998966352",
+      "mobile_phone_number": "998991231231",
+      "work_phone_number": "998711231231",
       "rank": "Подполковник",
       "position": "ИИБ ҲПБ Хотин-қизлар масалалари бўйича катта инспектор",
       "address": {
@@ -58,11 +58,11 @@ curl --request GET \
 ```json
 {
   "id": 857,
-  "status": "approved",
   "first_name": "Севара",
   "last_name": "Садуллаева",
   "middle_name": "Абдулакимовна",
-  "phone_number": "998998966352",
+  "mobile_phone_number": "998991231231",
+  "work_phone_number": "998711231231",
   "rank": "Подполковник",
   "position": "ИИБ ҲПБ Хотин-қизлар масалалари бўйича катта инспектор",
   "address": {
