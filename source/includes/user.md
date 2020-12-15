@@ -24,8 +24,8 @@ curl --request POST \
       "phoneNumber": "998998597873",
       "deviceId": "12312313123123",
       "address": {
-        "administrativeArea": "Toshkent viloyati",
-        "locality": "Chinoz",
+        "administrativeArea": 1,
+        "locality": 4,
         "latitude": 46.123123,
         "longitude": 35.345345
       }
@@ -44,8 +44,8 @@ curl --request POST \
   "phone_number": "998998597873",
   "address": {
     "id": 12,
-    "administrativeArea": "Toshkent viloyati",
-    "locality": "Chinoz",
+    "administrativeArea": 1,
+    "locality": 4,
     "latitude": 46.123123,
     "longitude": 35.345345
   },
@@ -83,8 +83,8 @@ curl --request GET \
   "phone_number": "998998597872",
   "address": {
     "id": 12,
-    "administrativeArea": "Toshkent viloyati",
-    "locality": "Chinoz",
+    "administrativeArea": 1,
+    "locality": 4,
     "latitude": 46.123123,
     "longitude": 35.345345
   },
@@ -135,8 +135,8 @@ curl --request PUT \
   --data '{
   "name": "Test1",
   "address": {
-    "administrativeArea": "Toshkent viloyati",
-    "locality": "Chinoz",
+    "administrativeArea": 1,
+    "locality": 3,
     "latitude": 46.123123,
     "longitude": 35.345345
   }
@@ -155,8 +155,8 @@ curl --request PUT \
   "phone_number": "998998597873",
   "address": {
     "id": 12,
-    "administrativeArea": "Toshkent viloyati",
-    "locality": "Chinoz",
+    "administrativeArea": 1,
+    "locality": 3,
     "latitude": 46.123123,
     "longitude": 35.345345
   },
@@ -191,8 +191,8 @@ curl --request PATCH \
   --data '{
   "name": "Test1",
   "address": {
-    "administrativeArea": "Toshkent viloyati",
-    "locality": "Chinoz",
+    "administrativeArea": 1,
+    "locality": 3,
     "latitude": 46.123123,
     "longitude": 35.345345
   }
@@ -211,8 +211,8 @@ curl --request PATCH \
   "phone_number": "998998597873",
   "address": {
     "id": 12,
-    "administrativeArea": "Toshkent viloyati",
-    "locality": "Chinoz",
+    "administrativeArea": 1,
+    "locality": 3,
     "latitude": 46.123123,
     "longitude": 35.345345
   },
@@ -273,8 +273,8 @@ curl --request PATCH \
   "phone_number": "998998597872",
   "address": {
     "id": 12,
-    "administrativeArea": "Toshkent viloyati",
-    "locality": "Chinoz",
+    "administrativeArea": 1,
+    "locality": 3,
     "latitude": 46.123123,
     "longitude": 35.345345
   },

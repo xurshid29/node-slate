@@ -8,7 +8,7 @@
 
 ```bash
 curl --request GET \
-  --url http://api.najot.test/v1/shelters?address[administrativeArea]=Toshkent viloyati
+  --url http://api.najot.test/v1/shelters?address[administrativeArea]=1
 ```
 
 > The above command returns JSON structured like this:
@@ -21,8 +21,8 @@ curl --request GET \
       "id": 2,
       "address": {
         "id": 13,
-        "administrativeArea": "Toshkent viloyati",
-        "locality": "Chinoz",
+        "administrativeArea": 1,
+        "locality": 1,
         "latitude": 46.123123,
         "longitude": 35.345345
       },
@@ -32,8 +32,8 @@ curl --request GET \
       "id": 1,
       "address": {
         "id": 14,
-        "administrativeArea": "Toshkent viloyati",
-        "locality": "Chinoz",
+        "administrativeArea": 1,
+        "locality": 4,
         "latitude": 46.123123,
         "longitude": 35.345345
       },
@@ -62,8 +62,8 @@ curl --request GET \
   "id": 1,
   "address": {
     "id": 34,
-    "administrativeArea": "Toshkent viloyati",
-    "locality": "Chinoz",
+    "administrativeArea": 1,
+    "locality": 4,
     "latitude": 46.123123,
     "longitude": 35.345345
   },

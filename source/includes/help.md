@@ -27,8 +27,8 @@ curl --request POST \
   --header 'x-auth-token: qweqweqweqe123123dasd' \
   --data '{
     "address": {
-      "administrativeArea": "Toshkent viloyati",
-      "locality": "Chinoz",
+      "administrativeArea": 1,
+      "locality": 4,
       "latitude": 46.123123,
       "longitude": 35.345345
     },

@@ -8,7 +8,7 @@
 
 ```bash
 curl --request GET \
-  --url https://api.najotapp.uz/v1/inspectors?address[administrativeArea]=Toshkent shahri
+  --url https://api.najotapp.uz/v1/inspectors?address[administrativeArea]=1
 ```
 
 > The above command returns JSON structured like this:
@@ -28,8 +28,8 @@ curl --request GET \
       "position": "ИИБ ҲПБ Хотин-қизлар масалалари бўйича катта инспектор",
       "address": {
         "id": 542,
-        "administrative_area": "Toshkent shahri",
-        "locality": "Yashnobod tumani",
+        "administrative_area": 1,
+        "locality": 1,
         "address_line": "Яшнобод тумани 7-сон ИИБ ҲПБ Хотин-қизлар масалалари бўйича катта инспектор",
         "latitude": null,
         "longitude": null
@@ -67,8 +67,8 @@ curl --request GET \
   "position": "ИИБ ҲПБ Хотин-қизлар масалалари бўйича катта инспектор",
   "address": {
     "id": 542,
-    "administrative_area": "Toshkent shahri",
-    "locality": "Yashnobod tumani",
+    "administrative_area": 1,
+    "locality": 1,
     "address_line": "Яшнобод тумани 7-сон ИИБ ҲПБ Хотин-қизлар масалалари бўйича катта инспектор",
     "latitude": null,
     "longitude": null
