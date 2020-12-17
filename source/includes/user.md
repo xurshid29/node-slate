@@ -60,6 +60,66 @@ curl --request POST \
 }
 ```
 
+## Get user list
+
+<aside class=warning>
+This request requires `phoneNumber` queryParam
+</aside>
+
+### HTTP Request
+
+`GET https://api.najotapp.uz/v1/users`
+
+```bash
+curl --request GET \
+  --url https://api.najotapp.uz/v1/users?phoneNumber=998998597872
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "page": 1,
+  "items": [
+    {
+      "id": 5,
+      "active": true,
+      "name": "Test1 ED 1",
+      "gender": null,
+      "birth_day": null,
+      "phone_number": "998998597872",
+      "address": {
+        "id": 693,
+        "administrative_area": 1,
+        "locality": 1,
+        "address_line": null,
+        "latitude": "46.123123",
+        "longitude": "35.345345",
+        "administrative_area_str": {
+          "ru": "Город Ташкент",
+          "uz": "Тошкент шаҳри",
+          "lotin": "Toshkent shahri"
+        },
+        "locality_str": {
+          "ru": "Учтепа район",
+          "uz": "Учтепа тумани",
+          "lotin": "Uchtepa tumani TG"
+        }
+      },
+      "verified": true,
+      "last_active_time": null,
+      "avatar": null,
+      "contacts": [],
+      "send_my_location": false,
+      "notify_nearest_shelter": false,
+      "created_at": "2020-12-05T17:35:41Z",
+      "updated_at": "2020-12-16T13:56:45Z"
+    }
+  ],
+  "total_count": 1
+}
+```
+
 ## Get single user
 
 ### HTTP Request
@@ -305,4 +365,13 @@ curl --request PATCH \
 }
 ```
 
+## Delete user
+
+### HTTP Request
+
+`DELETE https://api.najotapp.uz/v1/users/{ID}`
+
+```bash
+curl --request DELETE \
+  --url http://api.najot.test/v1/users/2
 
