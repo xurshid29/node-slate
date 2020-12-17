@@ -63,7 +63,7 @@ curl --request POST \
 ## Get user list
 
 <aside class=warning>
-Query param `phoneNumber` is requires
+Query param `phoneNumber` is required
 </aside>
 
 ### HTTP Request
