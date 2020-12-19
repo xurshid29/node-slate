@@ -22,8 +22,16 @@ curl --request GET \
       "first_name": "Севара",
       "last_name": "Садуллаева",
       "middle_name": "Абдулакимовна",
-      "mobile_phone_number": "998991231231",
-      "work_phone_number": "998711231231",
+      "phone_numbers": [
+        {
+          "type": "personal",
+          "phoneNumber": "998991231231"
+        },
+        {
+          "type": "work",
+          "phoneNumber": "998711231231"
+        }
+      ],
       "rank": "Подполковник",
       "position": "ИИБ ҲПБ Хотин-қизлар масалалари бўйича катта инспектор",
       "address": {
@@ -61,8 +69,16 @@ curl --request GET \
   "first_name": "Севара",
   "last_name": "Садуллаева",
   "middle_name": "Абдулакимовна",
-  "mobile_phone_number": "998991231231",
-  "work_phone_number": "998711231231",
+  "phone_numbers": [
+    {
+      "type": "personal",
+      "phoneNumber": "998991231231"
+    },
+    {
+      "type": "work",
+      "phoneNumber": "998711231231"
+    }
+  ],
   "rank": "Подполковник",
   "position": "ИИБ ҲПБ Хотин-қизлар масалалари бўйича катта инспектор",
   "address": {
